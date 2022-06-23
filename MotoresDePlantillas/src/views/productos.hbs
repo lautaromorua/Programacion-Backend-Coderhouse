@@ -1,0 +1,58 @@
+{{#if productos}}
+    <style>
+        body {
+                background-color: rgb(5, 70, 114);
+                cursor: default;
+            }
+            #main-container{
+                margin: 10px auto;
+                width: 600px;
+            }
+            table {
+                background-color:white;
+                text-align:center;
+                width:100%;
+                border-collapse:collapse;
+            }
+            th, td {
+                padding: 10px;
+            }
+            thead {
+                background-color:#246355;
+                border-bottom: solid 1px #0F362D;
+                color:white;
+            }
+            tr:nth-child(even){
+                background-color: #ddd;
+            }
+            tr:hover td{
+                background-color: #369681;
+                color: white;
+            }
+            p {
+                text-align: center;
+                background-color: #fff3cd;
+                padding: 20px;
+            }
+    </style>
+    <div id="main-container">
+        <table  border="1" align="center">
+            <thead>
+                <tr>
+                    <th>TITULO</th>
+                    <th>PRECIO</th>
+                    <th>PORTADA</th>
+                </tr>
+            </thead>
+    {{#each productos}}
+        <tr> 
+            <td><strong>{{this.name}}</strong></td>
+            <td>${{this.price}}</td>
+            <td><img alt="item img" src="{{this.thumbnail}}" width="100px" height="100px"/></td>
+        </tr>
+    {{/each}}
+    </table>
+    </div>
+    {{else}}
+    <p>No hay productos cargados</p>
+{{/if}}

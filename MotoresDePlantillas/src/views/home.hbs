@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+        <div class="containerInputs">
+            <form class='formPost1' method="POST", action="/">
+                <h2>Ingrese Productos</h2>
+                <p>Título</p>
+                <input type="text", name="name">
+                <p>Precio</p>
+                <input type="number", name="price">
+                <p>Foto URL</p>
+                <input type="text", name="thumbnail">
+                <button class="button">Enviar</button> 
+            </form>
+        </div>
+
+    <style>
+        body {
+            background-color: rgb(5, 70, 114);
+            cursor: default;
+            }
+        .formRoute1 {
+            float: right;
+            align-items: center;
+        }
+        .formRoute2 {
+            float: right;
+            align-items: center;
+        }    
+        .containerInputs {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+            padding: 25px;
+        }
+        .containerRoutes {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .containerHome {
+            display: flex;
+            flex-direction: column;
+        }
+        .formPost1 {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+            padding: 10px;
+            background-color: #e9ecef;
+            border: 2px black solid;
+        }
+        h2 {
+            color: #120dfe;
+        }
+        h3 {
+            text-align: center;
+        }
+        .button {
+            margin-top: 5px;
+            background:#4aaf55;
+            color: white;
+            border: none;
+            padding: 7px;
+        }
+    </style>
+</html>
