@@ -1,0 +1,16 @@
+extends home.pug 
+
+block datos
+        form(method="post", action="/")
+                label Título: 
+                    input(type="text", name="name")
+                label Precio: 
+                    input(type="number", name="price")
+                label Thumbnail URL:
+                    input(type="text", name="thumbnail")
+                button Enviar
+
+        form(action="/productos" method="get")
+            input(type="submit" value="Ver Productos")
+        form(action="/", method="get")
+            input(type="submit", value="Crear Productos")

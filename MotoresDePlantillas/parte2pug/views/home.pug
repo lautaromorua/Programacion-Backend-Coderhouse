@@ -1,0 +1,80 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Con Pug
+    body
+        style.
+            body {
+                background-color: darkkhaki;
+                cursor: default;
+            }
+            .formRoute1 {
+                float: right;
+                align-items: center;
+            }
+            .formRoute2 {
+                float: right;
+                align-items: center;
+            }
+            .containerInputs {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-items: center;
+                padding: 25px;
+            }
+            .containerRoutes {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .containerHome {
+                display: flex;
+                flex-direction: column;
+            }
+            .formPost1 {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-items: flex-start;
+                padding: 10px;
+                background-color: #e9ecef;
+                border: 2px black solid;
+            }
+            h2 {
+                color: #120dfe;
+            }
+            h3 {
+                text-align: center;
+            }
+            .button {
+                margin-top: 5px;
+                background:#4aaf55;
+                color: white;
+                border: none;
+                padding: 7px;
+            }
+        div.containerHome
+            div.containerRoutes
+                form.formRoute2(action="/", method="get")
+                    button Crear Productos
+                form.formRoute1(action="/productos" method="get")
+                    button Ver Productos
+                    
+            div.containerInputs
+                form.formPost1(method="post", action="/")
+                    h2 Ingrese Productos
+                    p Título 
+                    input(type="text", name="name")
+                    p Precio 
+                    input(type="number", name="price")
+                    p Foto URL
+                    input(type="text", name="thumbnail")
+                    button.button Enviar
+        block datos

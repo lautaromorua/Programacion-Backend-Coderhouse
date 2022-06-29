@@ -1,0 +1,54 @@
+extends main.pug 
+
+block datos2
+    if productos.length 
+        style.
+            body {
+                background-color: darkkhaki;
+                cursor: default;
+            }
+            #main-container{
+                margin: 10px auto;
+                width: 600px;
+            }
+            table {
+                background-color:white;
+                text-align:center;
+                width:100%;
+                border-collapse:collapse;
+            }
+            th, td {
+                padding: 10px;
+            }
+            thead {
+                background-color:#256355;
+                border-bottom: solid 1px #0F362D;
+                color:white;
+            }
+            tr:nth-child(even){
+                background-color: #ddd;
+            }
+            tr:hover td{
+                background-color: #369681;
+                color: white;
+            }
+            p {
+                text-align: center;
+                background-color: #fff3cd;
+                padding: 20px;
+            }
+        div#main-container
+            table(border="1" align="center")
+                thead
+                    tr
+                        th TITULO
+                        th PRECIO
+                        th PORTADA
+                each producto in productos
+                    tr
+                        td= `${producto.name}`
+                        td= `${producto.price}`
+                        td 
+                            img(alt="item img" src=`${producto.thumbnail}` width='100px' height='100px')
+    else
+        p no hay productos cargados
