@@ -1,0 +1,18 @@
+<div style="display: flex; flex-direction: column; flex-wrap: nowrap; align-items: center; padding: 25px;">
+    <form action="/productos" method="post" style="display: flex; flex-direction: column;flex-wrap: nowrap;align-items: flex-start;padding: 10px; background-color: #e9ecef; border: 2px black solid;">
+        <h2 style="color: #120dfe;">Ingrese Producto</h2>
+        <p>Nombre</p>
+        <input type="text" placeholder="nombre" name="name">
+        <p>Precio</p>
+        <input type="number" placeholder="precio" name="price">
+        <p>Foto URL</p>
+        <input type="text" placeholder="Foto URL" name="thumbnail">
+        <br>
+        <br>
+        <input type="submit" value="Enviar" style="background:#4aaf55; color: white;border: none;padding: 7px;">
+    </form>
+    <br>
+    <form action="/productos" enctype="multipart/form-data" method="get">
+        <input type="submit" value="Ver Productos">
+    </form>
+</div>
