@@ -1,0 +1,16 @@
+<nav>
+        <% if(data == undefined ){ %>
+    <form action="/login" id="sesionForm" method="post" autocomplete="off">
+        <input type="text" name= "username" id="user" placeholder="Ingrese su usuario" />
+        <input type="password" name= "password" id="pass" placeholder="Ingrese su contraseña" />
+        <button class="btn-iniciarSesion" type="submit" value="Iniciar sesion"></button>
+        <a href="register.ejs">
+        <button class="btn-iniciarSesion" type="button" >
+        <h2>Registrarse</h2>
+        </button></a>
+    </form>
+    <% }else{ %>
+    <h1>Bienvenido <%= data %> </h1> <form action="/logout" method="get"></form><button type="submit" onclick="location.href='logout'">Cerrar sesion</button></form>
+        <% } %>
+    
+</nav>

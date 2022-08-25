@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registro</title>
+</head>
+    <body>
+
+        <form action="/register" method="post" id="sUp-form">
+            <p>Registrar usuario</p>
+            <input type="text" name="username" placeholder="Ingrese su usuario">
+            <input type="text" name="email" placeholder="Ingrese su email">
+            <input type="password" name="password" placeholder="Ingrese su contraseña">
+            <input type="submit" name="submitLogin" value="Ingresar">
+        </form>
+        <button onclick="location.href='/welcomeLogin'">Ir a login</button>
+    </body>
+</html>
