@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websocket</title>
+</head>
+<body>
+    <div class="container">
+        <div class="formContainer">
+            <form id="productForm">
+                <h2>Ingrese Producto</h2>
+                <p>Nombre Del Producto</p>
+                <input type="text" name="name" id="descriptionInput" required>
+                <p>Precio Del Producto</p>
+                <input type="number"  name="price" id="priceInput" required>
+                <p>Foto URL Del Producto</p>
+                <input type="text" placeholder="https://-----" name="thumbnail" id="urlInput" required>
+                <br>
+                <br>
+                <div class="inputContainer">
+                    <input type="submit" value="Enviar" class="submit">
+                    <input type="reset" value="reset" class="reset">
+                </div>
+            </form>
+
+        </div>
+        <div style="display: flex;flex-direction: column;">
+            <div style="padding: 25px;" id="products">
+            </div>
+        </div>
+        <h1>Mensajería</h1>
+            <form id="messagesForm" >
+                <input id="emailInput" type="email" placeholder="your email" required>
+                <input id="messageInput" type="text" placeholder="mensaje" required>
+                <input type="submit" value="Enviar">
+                <div id="messagesPool"></div>
+            </form>
+        </div>
+    </div>
+    <style>
+        body {
+    background-color: lightgrey;
+    cursor: default;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+#messagesForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding-bottom: 100px;
+}
+#productsContainer {
+    box-shadow: -20px 10px 20px 12px #9f9f9f;
+    margin: 10px auto;
+    width: 600px;
+}
+table {
+    background-color:white;
+    text-align:center;
+    width:100%;
+    border-collapse:collapse;
+}
+th, td {
+    padding: 10px;
+}
+thead {
+    background-color:#246355;
+    border-bottom: solid 1px #0F362D;
+    color:white;
+}
+tr:nth-child(even){
+    background-color: #ddd;
+}
+tr:hover td{
+    background-color: #369681;
+    color: white;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 25px;
+}
+#productForm {
+    box-shadow: -20px -20px 20px 12px #9f9f9f;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding: 10px;
+    background-color: #e9ecef;
+    border: 2px black solid;
+}
+.submit {
+    background:#4aaf55;
+    color: white;
+    border: none;
+    padding: 7px;
+}
+.submit:hover{
+    background-color: lightgreen;
+}
+.reset {
+    background: #ff2f2f;
+    color: white;
+    border: none;
+    padding: 7px;
+}
+.reset:hover {
+    background-color: lightcoral;
+}
+h2 {
+    color: #120dfe;
+}
+#messagesPool{
+    font-family: 'Vesper Libre', serif;
+    color: green;
+}
+#messagesPool div {
+    text-shadow: 0px 0px 4px black;
+}
+#messagesPool div em {
+    text-shadow: none;
+}
+#emailInput{
+    padding: 5px;
+    margin-bottom: 9px;
+    border: none;
+}
+#messageInput{
+    padding: 5px;
+    margin-top: 9px;
+    border: none;
+}
+    </style>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./cliente.socket.js"></script>
+    <script src="./ejs.min.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>
