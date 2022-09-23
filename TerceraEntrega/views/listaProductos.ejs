@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesGral.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Ecommerce</title>
+</head>
+<body>
+    <h1>Bienvenido </h1>
+    <h2><img src="" alt="avatar"></h2>
+    <div class="container">
+        <div class="formContainer">
+            <form action="/productos" method="post" id="productForm">
+                <h2>Ingrese un producto</h2>
+                <label for="">Nombre</label>
+                <input name="nombre" id="title" type="text" placeholder="Ingrese nombre del producto">
+        
+                <label for="">Descripcion</label>
+                <input name="descripcion" id="description" type="text" placeholder="Ingrese la descripcion del producto">
+        
+                <label for="">Codigo</label>
+                <input name="codigo" id="code" type="text" placeholder="Ingrese codigo del producto">
+        
+                <label for="">Imagen</label>
+                <input name="url" id="thumbnail" type="text" placeholder="Ingrese URL de imagen del producto">
+        
+                <label for="">Precio</label>
+                <input  name="precio" id="price" type="number" placeholder="Ingrese precio en u$S">
+        
+                <label for="">Stock</label>
+                <input name="stock" id="stock" type="number" placeholder="Ingrese el stock inicial del producto">
+        
+                <div class="inputContainer">
+                    <input type="submit" value="Enviar" class="submit">
+                    <input type="reset" value="Reset" class="reset">
+                </div>
+            </form>
+
+            <button onclick="location.href='/carts/userCart'">Ir a carrito</button>
+        </div>
+        
+        
+    </div>
+    <div id="productos"></div>
+    
+    <table>
+        <tr>
+            <th>Nombre</th><th>Descripcion</th><th>Codigo</th><th>Imagen</th><th>Precio</th><th>Stock</th><th>Agregar a carrito</th>
+        </tr>
+        <% productos.forEach(producto => { %>
+            <tr>
+                <td><%= producto.nombre %> </td>
+                <td><%= producto.descripcion %> </td>
+                <td><%= producto.codigo %> </td>
+                <td><img src="<%= producto.thumbnail %>" alt=""> </td>
+                <td><%= producto.precio %> </td>
+                <td><%= producto.stock %> </td>
+                <td><form action="/carts/<%=cartID%>/product_id/<%=producto._id%>" method="POST"><input type="submit" value="Agregar a carrito"></form></td>
+            </tr>
+        <% }) %>  
+    </table>
+
+    <button type="submit" class="form_button" onclick="location.href='/logout'">Cerrar sesion</button>
+    <script src="./ejs.min.js"></script>
+</body>
+</html>
+
