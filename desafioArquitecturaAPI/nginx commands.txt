@@ -1,0 +1,30 @@
+* Iniciar -> args (fork/cluster. default: fork)
+npx nodemon src/server.js --mode fork
+npx nodemon src/server.js --mode cluster
+
+(listar procesos windows) tasklist /fi "imagename eq node.exe"
+
+* Forever
+forever start src/server.js --mode fork
+forever start src/server.js --mode cluster
+
+(listar procesos forever) forever list
+
+*PM2
+pm2 start src/server.js (modo fork)
+pm2 start src/server.js -i max (modo cluster de pm2)
+
+(listar procesos pm2) pm2 list
+
+----------------------------------------------------------
+NGINX
+* Levantar servidores:
+npx nodemon src/server.js --port 8080 --mode fork
+npx nodemon src/server.js --port 8081 --mode cluster
+
+npx nodemon src/server.js --port 8082 --mode cluster
+npx nodemon src/server.js --port 8083 --mode cluster
+npx nodemon src/server.js --port 8084 --mode cluster
+npx nodemon src/server.js --port 8085 --mode cluster
+
+

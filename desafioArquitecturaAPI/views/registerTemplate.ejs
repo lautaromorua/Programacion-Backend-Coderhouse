@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesLogin.css">
+    <title>Registro</title>
+</head>
+    <body>
+        <div class="container">
+            <div class="form_title" id="register">
+                <h1>Bienvenido</h1>
+            </div>
+            <div class="form_group">
+                <form action="/register" method="post" enctype="multipart/form-data">
+                    <input type="text" class="form_input" name="username" id="username_input" autofocus placeholder="Ingrese su usuario">
+                    <input type="text" class="form_input" name="email" id="email_input" autofocus placeholder="Ingrese su email">
+                    <input type="password" class="form_input" name="password" id="pass_input" autofocus placeholder="Ingrese su contraseña">
+                    <input type="text" class="form_input" name="firstName" id="firstName" placeholder="Ingrese su Nombre">
+                    <input type="text" class="form_input" name="lastName" id="lastName" placeholder="Ingrese su Apellido">
+                    <input type="text" class="form_input" name="phoneNumber" id="phoneNumber" placeholder="Ingrese su telefono">
+                    <input type="file" class="form_input" name="userAvatar" id="userAvatar">
+                    <div class="padding"></div>
+                    <button type="submit" class="form_button button_position" name="submitLogin" value="Registrar">Registrar</button>
+                </form>
+                <button class="form_button button_position" onclick="location.href='/login'">Ir a login</button>
+            </div>
+        </div>
+    </body>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" ></script>
+    <script src="./animationLogin.js"></script>
+</html>

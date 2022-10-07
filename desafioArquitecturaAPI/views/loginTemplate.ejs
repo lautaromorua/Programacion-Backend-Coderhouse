@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./stylesLogin.css">
+    <title>Iniciar Sesion</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form_title" id="login">
+            <h1>Bienvenido</h1>
+        </div>
+        <div class="form_group">
+        <form action="/login" id="sesionForm" method="post" autocomplete="off">
+            <input type="text" class="form_input" name= "username" id="username_input" autofocus placeholder="Ingrese su usuario" />
+            <input type="password" class="form_input" name= "password" id="pass_input" autofocus placeholder="Ingrese su contraseña" />
+            <div class="padding"></div>
+            <button class="form_button" type="submit" id="login_button" value="Iniciar sesion">Iniciar Sesión</button>
+        </div>
+    </form>
+</div>
+</body>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" ></script>
+<script src="./animationLogin.js"></script>
+</html>
