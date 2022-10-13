@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+</head>
+<body>
+    
+    <h1>Carrito</h1>
+    <table>
+        <tr>
+            <th>Nombre</th><th>Imagen</th><th>Precio</th><th>Cantidad</th><th>Total</th>
+        </tr>
+        <% productsInCart.forEach(producto => { %>
+            <tr>
+                <td><%= producto.nombre %> </td>
+                <td><img src="<%= producto.thumbnail %>" alt=""> </td>
+                <td><%= producto.precio %> </td>
+                <td><%= producto.cantidad %> </td>
+                <td>$<%= (producto.total) %> </td>
+            </tr>
+        <% }) %>  
+    </table>
+    <button onclick="location.href='/products/all'">Volver a la tienda</button>
+    <form action="/carts/compra" method="POST"> <input type="submit" name="compra" id="compra" value="Finalizar Compra"></form>
+</body>
+</html>
