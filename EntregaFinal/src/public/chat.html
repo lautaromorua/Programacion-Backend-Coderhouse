@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Sala de Chat</title>
+</head>
+<body>
+    <div id="chat">
+        <span id="chat-title">Chat general</span>
+        <div id="chat-pool">
+
+        </div>
+
+        <form action="" id="inputForm">
+            <label for="">Nombre</label>
+            <input type="text" id="nombre" placeholder="Nombre" >
+            <label for="">Email</label>
+            <input type="email" id="email" placeholder="Email">
+            <label for="">Mensaje</label>
+            <input type="text" id="mensaje" placeholder="Mensaje">
+            <button id="btn-send" type="submit">Enviar</button>
+        </form>
+    </div>
+
+    
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+    <script  src="/socket.io/socket.io.js"></script>
+    <script type="module" src="/client.js"></script>
+
+</body>
+</html>

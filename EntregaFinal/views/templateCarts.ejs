@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+</head>
+<body>
+    
+    <main>
+        <% if(products != undefined ){ %>
+    
+            
+                <div >
+                    <% products.forEach(p => { %> 
+                    <div >
+                    <h2><%- p.name %> </h2>
+                    <h3><%- p.description %> </h3>
+    
+                    <p>Precio:<%- p.price %> </p>
+                    <form action="/carrito/<%= cart %>/<%= p._id %>" method="post"><button type="submit">Eliminar</button></form>
+                    </div>
+            <% })  %> 
+            <br>
+            <a href="/">VOLVER</a>
+            </div>          
+            <form action="/order/sendTicket" method="post">
+                    
+                    
+                    <% products.forEach(p => { %>
+                    
+                    <input type="text" value="<%- p.name%>" > <br>
+                    
+                    
+                    <% })  %> 
+
+                <button type="submit">Enviar pedido</button>
+                </form>
+    
+                <% }else{ %>
+                <h1>Por favor inicie sesion para ver los productos</h1>
+                <% } %>
+        </main>
+</body>
+</html>

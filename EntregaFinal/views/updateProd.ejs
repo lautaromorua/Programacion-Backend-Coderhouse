@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar producto</title>
+</head>
+<body>
+    <div>
+        <h2>Modificar producto</h2>
+    </div>
+
+    <form action="/productos/updateProduct" method="post">
+        <select name="id">
+
+            <% data.forEach(p => { %>
+            
+                <option value="<%- p.id%>" name="<%- p.id%>"> <%- p.name%></option>
+                
+                
+                <% })  %> 
+
+
+
+        </select>
+        <h2>Ingrese un producto</h2>
+                <label for="">Nombre</label>
+                <input name="nombre" id="title" type="text" placeholder="Ingrese nombre del producto">
+        
+                <label for="">Descripcion</label>
+                <input name="descripcion" id="description" type="text" placeholder="Ingrese la descripcion del producto">
+        
+                <label for="">Codigo</label>
+                <input name="codigo" id="code" type="text" placeholder="Ingrese codigo del producto">
+        
+                <label for="">Imagen</label>
+                <input name="url" id="thumbnail" type="text" placeholder="Ingrese URL de imagen del producto">
+        
+                <label for="">Precio</label>
+                <input  name="precio" id="price" type="number" placeholder="Ingrese precio">
+        
+                <label for="">Stock</label>
+                <input name="stock" id="stock" type="number" placeholder="Ingrese el stock inicial del producto">
+        
+        <button class="btn btn-success" type="submit">Enviar</button>
+        
+    </form>
+    
+
+
+
+    <form action="/productos/deleteProduct" method="POST">
+
+    <select name="id">
+
+        <% data.forEach(p => { %>
+        
+            <option value="<%- p.id%>" name="<%- p.id%>"> <%- p.name%></option>
+            
+            
+            <% })  %> 
+
+
+
+    </select>
+    <button class="btn btn-danger" type="submit">Eliminar este producto</button>
+
+    </form>
+    <button class="btn btn-dark"><a href="./">volver</a></button>
+</body>
+</html>

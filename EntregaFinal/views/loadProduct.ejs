@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesGral.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Cargar Producto</h2>
+    <div class="container">
+        <div class="formContainer">
+            <form action="/productos/loadProduct" method="post" id="productForm">
+                <h2>Ingrese un producto</h2>
+                <label for="">Nombre</label>
+                <input name="name" id="name" type="text" placeholder="Ingrese nombre del producto">
+        
+                <label for="">Descripcion</label>
+                <input name="description" id="description" type="text" placeholder="Ingrese la descripcion del producto">
+        
+                <label for="">Codigo</label>
+                <input name="code" id="code" type="number" placeholder="Ingrese codigo del producto">
+        
+                <label for="">Imagen</label>
+                <input name="url" id="thumbnail" type="text" placeholder="Ingrese URL de imagen del producto">
+        
+                <label for="">Precio</label>
+                <input  name="price" id="price" type="number" placeholder="Ingrese precio">
+        
+                <label for="">Stock</label>
+                <input name="stock" id="stock" type="number" placeholder="Ingrese el stock inicial del producto">
+        
+                <button type="submit" class="submit">Enviar</button>
+                <button type="reset" class="reset">Reset</button>
+            </form>
+
+            <button><a href="/carrito">Ir a carrito</a></button>
+        </div>
+        
+        
+    </div>
+        <button><a href="/">Volver</a></button>
+    </div>
+</body>
+</html>
+

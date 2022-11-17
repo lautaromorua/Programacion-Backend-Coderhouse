@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace, sans-serif;
+}
+
+a, a:hover, a:visited, a:active {
+    text-decoration: none;
+    color: black;
+}
+
+#error {
+    font-size: 3rem;
+    color: rgb(197, 7, 7);
+    text-align: center;
+}
+
+
+body{
+    background-color: #ede9f8;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    background: rgb(161, 164, 167);
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: monospace;
+    font-size: 0.7em;
+}
+
+nav h1{
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.btn-iniciarSesion {
+    margin-left: 2em;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: rgb(38, 131, 237);
+    border-color: rgba(0, 0, 0, 0.493);
+    width: 100px;
+    height: 30px;
+}
+
+.btn-cerrarSesion {
+    margin: 0 0 10px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: rgb(241, 40, 40);
+    border-color: rgba(0, 0, 0, 0.493);
+    width: 100px;
+    height: 30px;
+}
+
+#logOut-btn {
+    margin-left: 50px;
+}
+
+input {
+    width: 100px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+
+#sUp-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
+    min-width: 15em;
+    padding: 10px;
+    transition: all 0.6s;
+}
+
+#logout-position{
+    align-items: left;
+}
+
+.card button {
+    color: white;
+    background-color: rgb(18, 19, 19);
+    padding: 4px;
+    margin-top: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#chat {
+    margin: 100px 200px 50px 200px;
+    text-align: center;
+
+}
+
+#chat-pool {
+
+    background-color: rgb(237, 182, 182);
+    height: 500px;
+    text-align:left;
+}
+
+#chat-title {
+    font-size: 2rem;
+    color:rgb(6, 5, 5);
+    font-family: monospace;
+}
+
+.listaProductos{
+    display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 0 5em 0 5em
+}
+
+.chat-main{
+    margin: 0 0 10px 10px;
+background-color: black;
+}
+
+.panelAdmin{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.panelAdmin >h3{
+    margin: 10px;
+}

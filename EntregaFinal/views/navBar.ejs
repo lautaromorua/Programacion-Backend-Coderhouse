@@ -1,0 +1,22 @@
+<nav>
+    <% if(data == undefined ){ %>
+
+        <h1>Bienvenido</h1>
+        <div>
+            <button class="btn-iniciarSesion" onclick="location.href='/login'">Iniciar sesion</button>
+        <button class="btn-iniciarSesion" onclick="location.href='/register'">Registrarse</button>
+        </div>
+        
+    <% }else{ %>
+        <div class="panelAdmin">
+        <h1>Bienvenido <%=data.username%></h1>
+        <% if(data.admin == true ){ %>
+            <div>
+                <h3><a href="/adminPanel"> Administrador</h3></a>
+                <h3><a href="/carrito">Ver carrito</a></h3>
+            </div>
+            <% } %>
+        <% } %>
+    </div>
+    
+</nav>

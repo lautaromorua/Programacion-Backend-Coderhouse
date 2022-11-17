@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Inicio</title>
+</head>
+<body>
+    <header> 
+        <%- include('./navBar.ejs', {data}) %> 
+    </header>
+
+    <main>
+        <% if(products != undefined ){ %>
+
+            <div class="listaProductos">
+                <% products.forEach(p => { %> 
+                <div class="card">
+                <h2><%- p.name %> </h2>
+                <h3><%- p.description %> </h3>
+                <p>Precio:<%- p.price %> </p>
+                <p><%- p.code %> </p>
+                <form action="/carrito/<%= p.id %>" method="post"><button type="submit">Agregar</button></form>
+                </div>
+            <% })  %> 
+            </div>
+            <div id="logout-position">
+                <form action="/logout" method="get"><button type="submit" class='btn-cerrarSesion'>Cerrar sesion</button></form>
+            </div>
+                <% }else{ %>
+                
+                <h1>Por favor inicie sesion para ver los productos</h1>
+                <% } %>
+    </main>
+
+        <button class='btn-cerrarSesion'><a href="/chat">Chat!</a></button>
+    
+    <script src="./ejs.min.js"></script>
+</body>
+</html>
+
